@@ -10,7 +10,7 @@ public class CashbackServiceTest {
         int amount = 3300;
         int actual = service.remain(amount);
         int expected = 700;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @org.junit.Test
@@ -19,17 +19,17 @@ public class CashbackServiceTest {
         int amount = 1000;
         int actual = service.remain(amount);
         int expected = 0;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
 
     }
 
     @org.junit.Test
-    void CalculateLowCashback() {
+    public void CalculateLowCashback() {
         CashbackService service = new CashbackService();
         int amount = 999;
         int actual = service.remain(amount);
         int expected = 1;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @org.junit.Test
@@ -38,7 +38,7 @@ public class CashbackServiceTest {
         int amount = 1001;
         int actual = service.remain(amount);
         int expected = 999;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @org.junit.Test
@@ -47,7 +47,7 @@ public class CashbackServiceTest {
         int amount = 4000;
         int actual = service.remain(amount);
         int expected = 0;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 }
 
